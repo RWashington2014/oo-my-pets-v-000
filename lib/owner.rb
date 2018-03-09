@@ -57,12 +57,10 @@ class Owner
     end
 
     def sell_pets
-      self.pets.each_key do |key|
-         self.pets[key].each do |pet|
-           if pet.mood == "happy"
-              pet.mood = "nervous"
-           end
-        end
+      self.pets.each do |type, animals|
+         animals.each do |pet|
+             pet.mood = "nervous"
+          end
         pets.clear
       end
     end
