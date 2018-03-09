@@ -68,9 +68,10 @@ class Owner
     end
 
     def list_pets
-      f = self.pets.fetch(:fishes).flatten.count
-      c = self.pets.fetch(:cats).flatten.count
-      d = self.pets.fetch(:dogs).flatten.count
+      f = self.pets[:fishes].count
+      c = self.pets[:cats].count
+      d = self.pets[:dogs].count
+
 
       result = "I have #{f} fish, #{d} dog(s), and #{c} cat(s)."
       result
