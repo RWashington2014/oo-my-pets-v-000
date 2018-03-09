@@ -63,7 +63,7 @@ class Owner
               pet.mood = "nervous"
            end
         end
-        pets.delete(key)
+        pets.clear
       end
     end
 
@@ -71,7 +71,6 @@ class Owner
       f = self.pets[:fishes].count
       c = self.pets[:cats].count
       d = self.pets[:dogs].count
-
 
       result = "I have #{f} fish, #{d} dog(s), and #{c} cat(s)."
       result
